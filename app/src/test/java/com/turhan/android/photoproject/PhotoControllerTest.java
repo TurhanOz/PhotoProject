@@ -44,4 +44,13 @@ public class PhotoControllerTest  {
 
         verify(operation).compute();
     }
+
+    @Test
+    public void cancelFetchingPhoto_shouldCollaborate_withPhotoOperation() throws Exception {
+        sut.operation = operation;
+
+        sut.cancelFetchingPhotos();
+
+        verify(operation).cancelPreviousOperation();
+    }
 }

@@ -43,4 +43,9 @@ public class MainActivityFragment extends Fragment {
         controller.fetchPhotos();
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        controller.cancelFetchingPhotos();
+    }
 }

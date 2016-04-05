@@ -3,12 +3,20 @@
 
 Android application fetching and displaying pictures.
 
+##Technical Choice & Quality
+- Retrofit w/ okhttp have been used for the request layer
+- Glide (over Picasso) is used for image fetching
+- RxJava is used for asynchronous computation
+- Unit Tests have been written on relevant places
+
+
 ##TODO
 - Display 'waiting placeholder' on Main Screen while fetching list
 - cache response (it's 304 though)
 - 'show albums' screen
 - 'show photos per album' screen
 - show big image on photo click
+- use ButterKnife for view binding
 
 ##304 and Etag
 The application http client has been configured with a cache.

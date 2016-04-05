@@ -32,4 +32,8 @@ public class PhotoController {
     public void fetchPhotos() {
         operation.compute();
     }
+
+    public void cancelFetchingPhotos(){
+        operation.cancelPreviousOperation();
+    }
 }
