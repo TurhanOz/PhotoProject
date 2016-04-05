@@ -8,6 +8,7 @@ Android application fetching and displaying pictures.
 - Glide (over Picasso) is used for image fetching
 - RxJava is used for asynchronous computation
 - Unit Tests have been written on relevant places
+- TravisCI is used
 
 
 ##TODO
