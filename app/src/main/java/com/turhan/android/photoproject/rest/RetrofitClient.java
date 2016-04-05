@@ -13,7 +13,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
     Retrofit retrofit;
 
-    public RetrofitClient(Context context) {this.retrofit = new Retrofit.Builder()
+    public RetrofitClient(Context context) {
+        this.retrofit = new Retrofit.Builder()
                 .baseUrl("http://jsonplaceholder.typicode.com/")
                 .client(getCacheClient(context))
                 .addConverterFactory(GsonConverterFactory.create())
@@ -29,6 +30,8 @@ public class RetrofitClient {
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .cache(cache)
                 .build();
+        
+        return okHttpClient;
     }
 
     public PhotoService getPhotoService() {
