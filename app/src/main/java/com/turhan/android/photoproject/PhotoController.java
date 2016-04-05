@@ -16,7 +16,7 @@ public class PhotoController {
 
     public PhotoController(Context context, RecyclerView recyclerView) {
         initAdapter(context, recyclerView);
-        initRetrofit();
+        initRetrofit(context);
         operation = new PhotoOperation(client.getPhotoService(), adapter);
     }
 
@@ -25,8 +25,8 @@ public class PhotoController {
         recyclerView.setAdapter(adapter);
     }
 
-    private void initRetrofit() {
-        client = new RetrofitClient();
+    private void initRetrofit(Context context) {
+        client = new RetrofitClient(context);
     }
 
     public void fetchPhotos() {
