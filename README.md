@@ -4,9 +4,8 @@
 Android application fetching and displaying pictures.
 
 ##TODO
-- Display waiting placeholder while fetching list
+- Display "waiting placeholder on Main Screen while fetching list
 - cache response
-
 - show albums
 - show photos per album
 - show big image on photo click
