@@ -51,6 +51,11 @@ android.testOptions.unitTests.all {
     }
 }
 
+project.gradle.taskGraph.whenReady {
+    connectedAndroidTest {
+        ignoreFailures = true
+    }
+}
 
 //for resources for unit tests
 //https://github.com/codepath/android_guides/wiki/Robolectric-Installation-for-Unit-Testing
