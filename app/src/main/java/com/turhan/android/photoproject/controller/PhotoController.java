@@ -1,4 +1,4 @@
-package com.turhan.android.photoproject;
+package com.turhan.android.photoproject.controller;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
