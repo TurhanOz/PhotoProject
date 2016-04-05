@@ -30,7 +30,7 @@ public class RetrofitClient {
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .cache(cache)
                 .build();
-        
+
         return okHttpClient;
     }
 
