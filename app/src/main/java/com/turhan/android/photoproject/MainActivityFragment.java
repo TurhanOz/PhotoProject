@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 public class MainActivityFragment extends Fragment {
     PhotoController controller;
@@ -38,6 +39,7 @@ public class MainActivityFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        Toast.makeText(getActivity(), getString(R.string.update_in_progress), Toast.LENGTH_SHORT).show();
         controller.fetchPhotos();
     }
 

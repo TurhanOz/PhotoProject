@@ -4,11 +4,23 @@
 Android application fetching and displaying pictures.
 
 ##TODO
-- Display "waiting placeholder on Main Screen while fetching list
-- cache response
-- show albums
-- show photos per album
+- Display 'waiting placeholder' on Main Screen while fetching list
+- cache response (it's 304 though)
+- 'show albums' screen
+- 'show photos per album' screen
 - show big image on photo click
+
+##304 and Etag
+The application http client has been configured with a cache.
+As we can see on the response header of the request, the server emits a 304 response, that allows us
+to use response in cache
+
+<table>
+<tr>
+<th>First request<br><img src="media/firstRequest.jpeg" width="38%"></th>
+<th>Subsequent requests<br><img src="media/secondRequest.jpeg" width="38%"></th>
+</tr>
+</table>
 
 ##Issue
 - thumbnails are 301 redirected. Issue fetching images with Picasso. Using Glide instead.
