@@ -21,10 +21,10 @@ public class PhotoOperation {
     Subscription subscription;
 
 
-    public PhotoOperation(PhotoService service, PhotoAdapter adapter, ArrayList photos) {
+    public PhotoOperation(PhotoService service, PhotoAdapter adapter) {
         this.service = service;
         this.adapter = adapter;
-        this.photos = photos;
+        this.photos = adapter.getPhotos();
     }
 
     public void compute() {

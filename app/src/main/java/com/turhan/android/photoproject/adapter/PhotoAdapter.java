@@ -25,6 +25,10 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder> 
         this.photos = photos;
     }
 
+    public ArrayList<Photo> getPhotos() {
+        return photos;
+    }
+
     @Override
     public PhotoAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.photo_row_layout, viewGroup, false);
